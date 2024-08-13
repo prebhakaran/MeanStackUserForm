@@ -1,0 +1,45 @@
+<div class="container mt=5">
+    <h2>Sign up</h2>
+
+    <!-- //id name ng model
+     add formsmodule in app.module.ts
+     httpclientmodule -->
+    <form (submit)="onSubmit()"> 
+        <div class="mb-3">
+          <label for="email" class="form-label">Email address</label>  
+          <input type="email" class="form-control" id="email" name="email" [(ngModel)]="" aria-describedby="emailHelp">
+          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password"name="password">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+
+</div>
+
+<!-- authservice .ts
+ 
+import httpclient
+
+private apiUrl = "http://localhost:5000/api/auth";
+constructor(private http:HttpClient){}
+
+signup(user:any):Observable<any>{                // post method
+    return this.http.post(`${this.apiUrl}/signup`,user);    //signup() created and user passed.
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    
+-->
